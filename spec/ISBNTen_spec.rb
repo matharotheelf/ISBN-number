@@ -13,5 +13,10 @@ describe ISBNTen do
       isbn = ISBNTen.new('3​-598-21508-8')
       expect(isbn.valid?).to eq(true)
     end
+
+    it 'returns false when non string input' do
+      isbn = ISBNTen.new(nil)
+      expect(isbn.valid?).to eq(false)
+    end
   end
 end
