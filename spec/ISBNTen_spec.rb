@@ -7,4 +7,11 @@ describe ISBNTen do
       expect(isbn.number).to eq('3​-598-21508-8')
     end
   end
+
+  describe '#valid?' do
+    it 'returns true when valid ISBNTen number is input' do
+      isbn = ISBNTen.new('3​-598-21508-8')
+      expect(isbn.valid?).to eq(true)
+    end
+  end
 end
