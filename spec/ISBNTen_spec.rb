@@ -23,5 +23,8 @@ describe ISBNTen do
       isbn = ISBNTen.new('notISBN')
       expect(isbn.valid?).to eq(false)
     end
+
+    # it 'returns false when string input without dashed in the right places' do
+    # end
   end
 end

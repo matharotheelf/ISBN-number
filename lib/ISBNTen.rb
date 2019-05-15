@@ -6,10 +6,6 @@ class ISBNTen
   end
 
   def valid?
-    if !@number.is_a?(String)
-      false
-    else
-      @number.length == 13
-    end
+    @number.is_a?(String) && @number.length == 13
   end
 end
