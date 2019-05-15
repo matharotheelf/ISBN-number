@@ -33,5 +33,10 @@ describe ISBNTen do
       isbn = ISBNTen.new('3-598p21508-8')
       expect(isbn.valid?).to eq(false)
     end
+
+    it 'returns false when string input without dash in the twelfth place' do
+      isbn = ISBNTen.new('3-598-21508p8')
+      expect(isbn.valid?).to eq(false)
+    end
   end
 end
