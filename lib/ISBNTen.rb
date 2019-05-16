@@ -9,6 +9,26 @@ class ISBNTen
     string_length_thirteen? && correct_dashes? && serial_valid?
   end
 
+  def convert_to_ISBN13
+    arry = [9, 7, 8]
+    arry += make_array[0..-2]
+    total = 0
+    arry.each_with_index do |item, index|
+      total += if index.even?
+                 item.to_i
+               else
+                 item.to_i * 3
+               end
+    end
+    check_digit = (10 - total % 10) % 10
+    arry.push(check_digit)
+    arry.insert(3, '-')
+    arry.insert(5, '-')
+    arry.insert(9, '-')
+    arry.insert(15, '-')
+    arry.join('')
+  end
+
   private
 
   def string_length_thirteen?

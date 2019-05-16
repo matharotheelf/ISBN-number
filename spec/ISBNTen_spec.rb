@@ -54,4 +54,11 @@ describe ISBNTen do
       expect(isbn.valid?).to eq(false)
     end
   end
+
+  describe '#convert_to_ISBN13' do
+    it 'can convert valid ISBN10 to ISBN13' do
+      isbnten = ISBNTen.new('3-598-21507-X')
+      expect(isbnten.convert_to_ISBN13).to eq('978-3-598-21507-0')
+    end
+  end
 end
