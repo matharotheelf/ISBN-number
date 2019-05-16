@@ -43,6 +43,11 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/admin/tech-tests/ISBN-number/lib/ISBNTen.rb": [
@@ -50,21 +55,32 @@
         1,
         null,
         1,
+        8,
+        null,
+        null,
+        1,
         7,
         null,
         null,
         1,
-        6,
+        null,
+        1,
+        2,
+        28,
+        2,
+        2,
+        2,
+        20,
+        null,
+        2,
         null,
         null,
         1,
-        null,
-        1,
-        4,
+        5,
         null,
         null
       ]
     },
-    "timestamp": 1557939345
+    "timestamp": 1558010637
   }
 }

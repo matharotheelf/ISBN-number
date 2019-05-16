@@ -38,5 +38,10 @@ describe ISBNTen do
       isbn = ISBNTen.new('3-598-21508p8')
       expect(isbn.valid?).to eq(false)
     end
+
+    it 'returns false when string input without valid ISBN number' do
+      isbn = ISBNTen.new('3-598-21508-0')
+      expect(isbn.valid?).to eq(false)
+    end
   end
 end
