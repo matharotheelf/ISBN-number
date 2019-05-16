@@ -6,10 +6,14 @@ class ISBNTen
   end
 
   def valid?
-    @number.is_a?(String) && @number.length == 13 && correct_dashes? && calculator
+    string_length_thirteen? && correct_dashes? && calculator
   end
 
   private
+
+  def string_length_thirteen?
+    @number.is_a?(String) && @number.length == 13
+  end
 
   def calculator
     arry = @number.split('')
