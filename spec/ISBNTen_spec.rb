@@ -45,7 +45,7 @@ describe ISBNTen do
     end
 
     it 'returns true when string input with valid ISBN number and X numberal' do
-      isbn = ISBNTen.new('3-598-2150X-4')
+      isbn = ISBNTen.new('3-598-21507-X')
       expect(isbn.valid?).to eq(true)
     end
   end
