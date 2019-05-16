@@ -15,11 +15,14 @@ class ISBNTen
     @number.is_a?(String) && @number.length == 13
   end
 
-  def calculator
+  def make_array
     arry = @number.split('')
-    arry_no_dash = arry.reject.with_index { |_e, i| [1, 5, 11].include? i }
+    arry.reject.with_index { |_e, i| [1, 5, 11].include? i }
+  end
+
+  def calculator
     total = 0
-    arry_no_dash.each_with_index do |item, index|
+    make_array.each_with_index do |item, index|
       digit = if item == 'X'
                 10
               else
