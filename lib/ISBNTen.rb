@@ -12,6 +12,17 @@ class ISBNTen
   def convert_to_ISBN13
     arry = [9, 7, 8]
     arry += make_array[0..-2]
+    arry_with_check_digit = add_ISBN13_check_digit(arry)
+    arry.insert(3, '-')
+    arry.insert(5, '-')
+    arry.insert(9, '-')
+    arry.insert(15, '-')
+    arry.join('')
+  end
+
+  private
+
+  def add_ISBN13_check_digit(arry)
     total = 0
     arry.each_with_index do |item, index|
       total += if index.even?
@@ -22,14 +33,7 @@ class ISBNTen
     end
     check_digit = (10 - total % 10) % 10
     arry.push(check_digit)
-    arry.insert(3, '-')
-    arry.insert(5, '-')
-    arry.insert(9, '-')
-    arry.insert(15, '-')
-    arry.join('')
   end
-
-  private
 
   def string_length_thirteen?
     @number.is_a?(String) && @number.length == 13
