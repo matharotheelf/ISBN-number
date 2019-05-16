@@ -13,14 +13,18 @@ class ISBNTen
     arry = [9, 7, 8]
     arry += make_array[0..-2]
     arry_with_check_digit = add_ISBN13_check_digit(arry)
+    create_ISBN13_string(arry_with_check_digit)
+  end
+
+  private
+
+  def create_ISBN13_string(arry)
     arry.insert(3, '-')
     arry.insert(5, '-')
     arry.insert(9, '-')
     arry.insert(15, '-')
     arry.join('')
   end
-
-  private
 
   def add_ISBN13_check_digit(arry)
     total = 0
