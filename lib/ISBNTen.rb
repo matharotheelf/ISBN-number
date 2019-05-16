@@ -6,7 +6,7 @@ class ISBNTen
   end
 
   def valid?
-    string_length_thirteen? && correct_dashes? && calculator
+    string_length_thirteen? && correct_dashes? && calculate__serial_valid?
   end
 
   private
@@ -20,7 +20,7 @@ class ISBNTen
     arry.reject.with_index { |_e, i| [1, 5, 11].include? i }
   end
 
-  def calculator
+  def calculate_serial_valid?
     total = 0
     make_array.each_with_index do |item, index|
       digit = if item == 'X'
