@@ -44,9 +44,14 @@ describe ISBNTen do
       expect(isbn.valid?).to eq(false)
     end
 
-    it 'returns true when string input with valid ISBN number and X numberal' do
+    it 'returns true when valid ISBN number and X numeral check digit' do
       isbn = ISBNTen.new('3-598-21507-X')
       expect(isbn.valid?).to eq(true)
+    end
+
+    it 'returns false when string input with X numeral before check digit' do
+      isbn = ISBNTen.new('3-598-2150X-4')
+      expect(isbn.valid?).to eq(false)
     end
   end
 end
