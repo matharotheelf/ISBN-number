@@ -16,7 +16,12 @@ class ISBNTen
     arry_no_dash = arry.reject.with_index { |_e, i| [1, 5, 11].include? i }
     total = 0
     arry_no_dash.each_with_index do |item, index|
-      total += item.to_i * (10 - index)
+      digit = if item == 'X'
+                10
+              else
+                item.to_i
+              end
+      total += digit * (10 - index)
     end
     total % 11 == 0
   end
