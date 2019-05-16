@@ -6,7 +6,7 @@ class ISBNTen
   end
 
   def valid?
-    string_length_thirteen? && correct_dashes? && calculate_serial_valid?
+    string_length_thirteen? && correct_dashes? && serial_valid?
   end
 
   private
@@ -28,7 +28,7 @@ class ISBNTen
     end
   end
 
-  def calculate_serial_valid?
+  def serial_valid?
     total = 0
     make_array.each_with_index do |item, index|
       total += convert_digit(item) * (10 - index)
