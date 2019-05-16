@@ -6,7 +6,7 @@ class ISBNTen
   end
 
   def valid?
-    string_length_thirteen? && correct_dashes? && calculate__serial_valid?
+    string_length_thirteen? && correct_dashes? && calculate_serial_valid?
   end
 
   private
@@ -20,15 +20,18 @@ class ISBNTen
     arry.reject.with_index { |_e, i| [1, 5, 11].include? i }
   end
 
+  def convert_digit(digit)
+    if digit == 'X'
+      10
+    else
+      digit.to_i
+    end
+  end
+
   def calculate_serial_valid?
     total = 0
     make_array.each_with_index do |item, index|
-      digit = if item == 'X'
-                10
-              else
-                item.to_i
-              end
-      total += digit * (10 - index)
+      total += convert_digit(item) * (10 - index)
     end
     total % 11 == 0
   end
