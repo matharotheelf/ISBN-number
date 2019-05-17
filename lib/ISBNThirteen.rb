@@ -13,9 +13,7 @@ class ISBNThirteen
 
   def serial_valid?
     total = 0
-    arry = @number.split('')
-    arry_no_dash = arry.reject.with_index { |_e, i| [3, 5, 9, 15].include? i }
-    arry_no_dash.each_with_index do |item, index|
+    make_array.each_with_index do |item, index|
       total += if index.even?
                  item.to_i
                else
@@ -23,6 +21,11 @@ class ISBNThirteen
                end
     end
     total % 10 == 0
+  end
+
+  def make_array
+    arry = @number.split('')
+    arry.reject.with_index { |_e, i| [3, 5, 9, 15].include? i }
   end
 
   def correct_dashes?
