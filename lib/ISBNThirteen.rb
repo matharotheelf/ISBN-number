@@ -6,6 +6,6 @@ class ISBNThirteen
   end
 
   def valid?
-    @number.is_a?(String) && @number.length == 17 && @number[3] == '-' && @number[5] == '-'
+    @number.is_a?(String) && @number.length == 17 && @number[3] == '-' && @number[5] == '-' && @number[9] == '-'
   end
 end
