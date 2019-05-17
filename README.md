@@ -47,33 +47,33 @@ From irb, if you have required the correct files, as above, you can operate the 
 
 To create an ISBNTen object, input:
 
-isbnten = ISBNTen.new(serial)
+```isbnten = ISBNTen.new(serial)```
 
 (Where 'isbnten' is an arbitrary name to save the object, and 'serial' is a string which should be the serial of your ISBN-10 object.)
 
 To access the serial of your object, input:
 
-isbnten.number
+```isbnten.number```
 
 To find out whether your serial is valid, input:
 
-isbnten.valid?
+```isbnten.valid?```
 
 This returns true if the serial is valid and false otherwise.
 
 To find out the corresponding ISBN-13 serial for your ISBN-10 serial, input:
 
-isbnten.convert_to_ISBN13
+```isbnten.convert_to_ISBN13```
 
 Similarly, to create an ISBNthirteen object, input:
 
-isbnthirteen = ISBNThirteen.new(serial)
+```isbnthirteen = ISBNThirteen.new(serial)```
 
 (Where 'isbnthirteen' is an arbitrary name to save the object, and 'serial' is a string which should be the serial of your ISBN-13 object.)
 
 And again, to find out whether your serial is valid, input:
 
-isbnthirteen.valid?
+```isbnthirteen.valid?```
 
 This returns true if the serial is valid and false otherwise.
 
