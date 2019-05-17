@@ -171,6 +171,11 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/admin/tech-tests/ISBN-number/lib/ISBNThirteen.rb": [
@@ -178,15 +183,15 @@
         1,
         null,
         1,
-        5,
+        6,
         null,
         null,
         1,
-        4,
+        5,
         null,
         null
       ]
     },
-    "timestamp": 1558100404
+    "timestamp": 1558100579
   }
 }
