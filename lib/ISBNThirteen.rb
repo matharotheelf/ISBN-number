@@ -4,4 +4,8 @@ class ISBNThirteen
   def initialize(number)
     @number = number
   end
+
+  def valid?
+    true
+  end
 end
