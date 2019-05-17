@@ -18,5 +18,15 @@ describe ISBNThirteen do
       isbn = ISBNThirteen.new(nil)
       expect(isbn.valid?).to eq(false)
     end
+
+    it 'returns false when string input of incorrect length' do
+      isbn = ISBNThirteen.new('notISBN')
+      expect(isbn.valid?).to eq(false)
+    end
+
+    # it 'returns false when string input without dash in the fourth place' do
+    #   isbn = ISBNTen.new('978-3-598-21507-0')
+    #   expect(isbn.valid?).to eq(false)
+    # end
   end
 end
