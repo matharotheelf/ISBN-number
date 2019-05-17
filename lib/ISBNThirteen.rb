@@ -14,13 +14,17 @@ class ISBNThirteen
   def serial_valid?
     total = 0
     make_array.each_with_index do |item, index|
-      total += if index.even?
-                 item.to_i
-               else
-                 item.to_i * 3
-               end
+      total += weighted_value(item, index)
     end
     total % 10 == 0
+  end
+
+  def weighted_value(digit, index)
+    if index.even?
+      digit.to_i
+    else
+      digit.to_i * 3
+    end
   end
 
   def make_array
