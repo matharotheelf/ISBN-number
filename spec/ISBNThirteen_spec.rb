@@ -34,8 +34,13 @@ describe ISBNThirteen do
       expect(isbn.valid?).to eq(false)
     end
 
-    it 'returns false when string input without dash in the sixth place' do
+    it 'returns false when string input without dash in the tenth place' do
       isbn = ISBNThirteen.new('978-3-598p21507-0')
+      expect(isbn.valid?).to eq(false)
+    end
+
+    it 'returns false when string input without dash in the 16th place' do
+      isbn = ISBNThirteen.new('978-3-598-21507p0')
       expect(isbn.valid?).to eq(false)
     end
   end
