@@ -29,14 +29,18 @@ class ISBNTen
   def add_ISBN13_check_digit(arry)
     total = 0
     arry.each_with_index do |item, index|
-      total += if index.even?
-                 item.to_i
-               else
-                 item.to_i * 3
-               end
+      total += weighted_value_ISBN13(item, index)
     end
     check_digit = (10 - total % 10) % 10
     arry.push(check_digit)
+  end
+
+  def weighted_value_ISBN13(digit, index)
+    if index.even?
+      digit.to_i
+    else
+      digit.to_i * 3
+    end
   end
 
   def string_length_thirteen?
