@@ -6,6 +6,6 @@ class ISBNThirteen
   end
 
   def valid?
-    true
+    @number.is_a?(String)
   end
 end
