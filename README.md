@@ -21,11 +21,16 @@ I made a method "convert_to_ISBN13" for the ISBN-10 class which converts the ser
 ## Tech Stack
 Ruby v 2.5.1
 
+Linting:
+
+Rubocop
+
+Testing:
+
 RSpec
 
 SimpleCov
 
-Rubocop
 
 ## Quickstart
 
@@ -87,9 +92,9 @@ This returns true if the serial is valid and false otherwise.
 ```
 
 ## Contributors
- 
+
 [Tom Lawrence](https://github.com/matharotheelf)  
- 
+
 ## How to Contribute
 
 If you want to improve this ISBN number console app and see your name added to the above list of contributors, simply branch this repo, do your thing, and make a pull request back to this repo explaining the contributions you made.
