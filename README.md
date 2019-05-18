@@ -19,13 +19,15 @@ I made a method "convert_to_isbn13" for the ISBN-10 class which converts the ser
 
 
 ## Tech Stack
+
 Ruby v 2.5.1
 
-Linting:
+**Linting:**
 
 Rubocop
 
-Testing:
+
+**Testing:**
 
 RSpec
 
