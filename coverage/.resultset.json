@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/admin/tech-tests/ISBN-number/spec/ISBNTen_spec.rb": [
+      "/Users/admin/tech-tests/ISBN-number/spec/isbnten_spec.rb": [
         1,
         null,
         1,
@@ -67,7 +67,8 @@
         null,
         null
       ],
-      "/Users/admin/tech-tests/ISBN-number/lib/ISBNTen.rb": [
+      "/Users/admin/tech-tests/ISBN-number/lib/isbnten.rb": [
+        null,
         1,
         1,
         null,
@@ -143,7 +144,7 @@
         null,
         null
       ],
-      "/Users/admin/tech-tests/ISBN-number/spec/ISBNThirteen_spec.rb": [
+      "/Users/admin/tech-tests/ISBN-number/spec/isbnthirteen_spec.rb": [
         1,
         null,
         1,
@@ -197,7 +198,8 @@
         null,
         null
       ],
-      "/Users/admin/tech-tests/ISBN-number/lib/ISBNThirteen.rb": [
+      "/Users/admin/tech-tests/ISBN-number/lib/isbnthirteen.rb": [
+        null,
         1,
         1,
         null,
@@ -236,12 +238,13 @@
         6,
         null,
         null,
+        null,
         1,
         8,
         null,
         null
       ]
     },
-    "timestamp": 1558103720
+    "timestamp": 1558189799
   }
 }

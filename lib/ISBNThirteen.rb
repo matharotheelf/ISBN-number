@@ -1,3 +1,4 @@
+# Class to store and verify ISBN-13 code
 class ISBNThirteen
   attr_reader :number
 
@@ -16,7 +17,7 @@ class ISBNThirteen
     make_array.each_with_index do |item, index|
       total += weighted_value(item, index)
     end
-    total % 10 == 0
+    (total % 10).zero?
   end
 
   def weighted_value(digit, index)
@@ -33,7 +34,8 @@ class ISBNThirteen
   end
 
   def correct_dashes?
-    @number[3] == '-' && @number[5] == '-' && @number[9] == '-' && @number[15] == '-'
+    @number[3] == '-' && @number[5] == '-' && @number[9] == '-' &&
+      @number[15] == '-'
   end
 
   def string_length_seventeen?

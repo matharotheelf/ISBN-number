@@ -1,3 +1,4 @@
+# Class to store, verify, and convert ISBN-10 codes
 class ISBNTen
   attr_reader :number
 
@@ -9,16 +10,16 @@ class ISBNTen
     string_length_thirteen? && correct_dashes? && serial_valid?
   end
 
-  def convert_to_ISBN13
+  def convert_to_isbn13
     arry = [9, 7, 8]
     arry += make_array[0..-2]
-    arry_with_check_digit = add_ISBN13_check_digit(arry)
-    create_ISBN13_string(arry_with_check_digit)
+    arry_with_check_digit = add_isbn13_check_digit(arry)
+    create_isbn13_string(arry_with_check_digit)
   end
 
   private
 
-  def create_ISBN13_string(arry)
+  def create_isbn13_string(arry)
     arry.insert(3, '-')
     arry.insert(5, '-')
     arry.insert(9, '-')
@@ -26,16 +27,16 @@ class ISBNTen
     arry.join('')
   end
 
-  def add_ISBN13_check_digit(arry)
+  def add_isbn13_check_digit(arry)
     total = 0
     arry.each_with_index do |item, index|
-      total += weighted_value_ISBN13(item, index)
+      total += weighted_value_isbn13(item, index)
     end
     check_digit = (10 - total % 10) % 10
     arry.push(check_digit)
   end
 
-  def weighted_value_ISBN13(digit, index)
+  def weighted_value_isbn13(digit, index)
     if index.even?
       digit.to_i
     else
@@ -65,7 +66,7 @@ class ISBNTen
     make_array.each_with_index do |item, index|
       total += convert_digit(item, index) * (10 - index)
     end
-    total % 11 == 0
+    (total % 11).zero?
   end
 
   def correct_dashes?

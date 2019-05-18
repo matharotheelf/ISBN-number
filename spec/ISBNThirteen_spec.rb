@@ -1,4 +1,4 @@
-require 'ISBNThirteen'
+require 'isbnthirteen'
 
 describe ISBNThirteen do
   describe '#number' do
