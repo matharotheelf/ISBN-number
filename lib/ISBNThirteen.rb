@@ -1,4 +1,4 @@
-# Class to store and verify ISBN-13 code
+# Class to store and verify ISBN-13 codes
 class ISBNThirteen
   attr_reader :number
 
