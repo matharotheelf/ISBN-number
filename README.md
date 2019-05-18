@@ -11,11 +11,11 @@ This app converts ISBN numbers and checks their validity:
 
 I decided to use Ruby to develop this app.
 
-I made a seperate classes for both ISBN-10 and ISBN-13 objects that save serials to them.  
+I made seperate classes for both ISBN-10 and ISBN-13 objects that save serials to them.  
 
 I made a method "valid?" for both classes to test the ISBN serial's validity.
 
-I made a method "convert_to_ISBN13" for the ISBN-10 class which converts the serial to ISBN-13.
+I made a method "convert_to_isbn13" for the ISBN-10 class which converts the serial to ISBN-13.
 
 
 ## Tech Stack
@@ -28,8 +28,6 @@ Rubocop
 Testing:
 
 RSpec
-
-SimpleCov
 
 
 ## Quickstart
@@ -68,7 +66,7 @@ This returns true if the serial is valid and false otherwise.
 
 To find out the corresponding ISBN-13 serial for your ISBN-10 serial, input:
 
-```isbnten.convert_to_ISBN13```
+```isbnten.convert_to_isbn13```
 
 Similarly, to create an ISBNthirteen object, input:
 
@@ -84,10 +82,10 @@ This returns true if the serial is valid and false otherwise.
 
 ## User Stories
 ```
-1. As a user to store an ISBN-10 number, I can create and ISBN-10 number object.
+1. As a user to store an ISBN-10 number, I can create an ISBN-10 number object.
 2. As a user to test if my ISBN-10 number is valid, a 'valid?' method returns whether or not my number is valid.
-3. As a user to calculate the corresponding ISBN-13 number for an ISBN-10 number, a 'convert_to_ISBN13' returns the corresponding ISBN-13 number
-4. As a user to store an ISBN-13 number, I can create and ISBN-13 number object.
+3. As a user to calculate the corresponding ISBN-13 number for an ISBN-10 number, a 'convert_to_isbn13' method returns the corresponding ISBN-13 number
+4. As a user to store an ISBN-13 number, I can create an ISBN-13 number object.
 5. As a user to test if my ISBN-13 number is valid, a 'valid?' method returns whether or not my number is valid.
 ```
 
