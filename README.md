@@ -97,4 +97,4 @@ This returns true if the serial is valid and false otherwise.
 
 ## How to Contribute
 
-If you want to improve this ISBN number console app and see your name added to the above list of contributors, simply branch this repo, do your thing, and make a pull request back to this repo explaining the contributions you made.
+If you want to improve this ISBN number console app and see your name added to the above list of contributors, simply branch this repo, add to the code, and make a pull request back to this repo explaining the contributions you made.
